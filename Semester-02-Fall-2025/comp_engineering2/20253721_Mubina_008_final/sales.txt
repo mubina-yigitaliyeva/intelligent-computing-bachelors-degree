@@ -1,0 +1,3 @@
+Coffee,5
+Bagel,3
+Sandwich,8

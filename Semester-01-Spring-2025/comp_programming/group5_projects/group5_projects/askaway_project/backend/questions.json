@@ -1,0 +1,6 @@
+[
+  {"id": 1, "topic": "Hello", "subject": "Hello", "semester": 2, "text": "Hello", "date": "2025-05-21 22:49:30", "answer": "Bye"},
+  {"id": 2, "topic": "School", "subject": "Auth", "semester": 1, "text": "WHat is school?", "date": "2025-05-22 13:15:56", "answer": "school is place"},
+  {"id": 3, "topic": "1", "subject": "1", "semester": 1, "text": "1", "date": "2025-05-24 21:39:54", "answer": "Not answered yet"},
+  {"id": 4, "topic": "Introduction to programming", "subject": "Introduction to programming", "semester": 1, "text": "What is a programming?", "date": "2025-06-02 01:06:50", "answer": "Programming is a fun"}
+]

@@ -1,0 +1,10 @@
+======================
+   TECHSHARE REPORT
+======================
+
+Total count of gadgets             : 1.
+The number of available gadgets    : 0.
+The number of borrowed gadgets     : 1.
+
+--- Borrowed items --- 
+Phone

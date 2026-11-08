@@ -1,0 +1,11 @@
+{
+  "T101": {
+    "course_id": "T101",
+    "title": "Test",
+    "instructor": "Prof",
+    "capacity": 1,
+    "credits": 3,
+    "description": "",
+    "schedule": ""
+  }
+}

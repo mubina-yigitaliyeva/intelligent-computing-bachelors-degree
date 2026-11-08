@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Georgia, serif;
+    line-height: 1.6em;
+    background: linear-gradient(135deg, lightblue,  white);
+
+    margin: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 1.5em;
+    text-align: center;
+
+    height: 15px;
+}
+
+header {
+    background-color: rgba(0, 0, 139, 0.8);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    flex-wrap: row wrap;
+
+    padding-bottom: 10px;
+}
+
+nav a {
+    list-style-type: none;
+    color: white;
+
+    text-decoration: none;
+}
+
+nav a:link {
+    color: aqua;
+}
+
+nav a:visited {
+    color: blanchedalmond;
+}
+
+nav a:hover {
+    color: lightblue;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.tech-gallery {
+    margin: 10px;
+    padding: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.tech-card {
+    position: relative;
+    border: 2px solid blue;
+    background-color: white;
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+
+    padding: 1.5em;
+    margin-bottom: 1em;
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+@media screen and (min-width: 600px){
+    .tech-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        gap: 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .tech-gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    nav {
+        gap: 180px;
+    }
+}
+
+.status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(232, 164, 38);
+    color: white;
+    border-radius: 5px;
+
+    width: 40px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer {
+    text-align: center;
+}

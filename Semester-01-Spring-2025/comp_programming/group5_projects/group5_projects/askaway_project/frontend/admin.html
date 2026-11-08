@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AskAway - Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AskAway Admin Panel</h1>
+    <p>Answer submitted student questions.</p>
+  </header>
+
+  <section id="unanswered-questions-section">
+    <h2>Unanswered Questions</h2>
+
+    <div id="adminFilters">
+      <input type="text" id="adminFilterSubject" placeholder="Subject" />
+      <input type="text" id="adminFilterTopic" placeholder="Topic" />
+      <input type="number" id="adminFilterSemester" placeholder="Semester" />
+      <button id="applyAdminFiltersBtn">Filter</button>
+    </div>
+
+    <div id="unansweredQuestionsList">
+      <!-- Unanswered questions will be listed here -->
+    </div>
+  </section>
+
+  <section id="answer-section" style="display:none;">
+    <h2>Answer Question</h2>
+    <p><strong>Question:</strong> <span id="currentQuestionText"></span></p>
+    <textarea id="answerText" rows="4" placeholder="Write your answer here..."></textarea>
+    <button id="submitAnswerBtn">Submit Answer</button>
+    <button id="cancelAnswerBtn">Cancel</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

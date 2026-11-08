@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #010e84;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;          
+  margin: 0.2rem 0;
+}
+
+header p {
+  font-size: 1.5rem;        
+  margin: 0;
+}
+
+section {
+  padding: 1rem;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.content-area {
+  flex: 3;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #fff;
+  padding: 1rem;
+  border-left: 2px solid #ccc;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+textarea,
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#questionsList,
+#unansweredQuestionsList {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+}

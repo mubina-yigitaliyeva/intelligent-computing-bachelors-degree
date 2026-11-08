@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AskAway - Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>AskAway</h1>
+    <p>Submit your academic question.</p>
+  </header>
+
+  <section id="question-form-section">
+    <h2>Ask a Question</h2>
+    <form id="questionForm">
+      <input type="text" id="subject" placeholder="Subject (e.g., Math)" required />
+      <input type="text" id="topic" placeholder="Topic (e.g., Algebra)" required />
+      <input type="number" id="semester" placeholder="Semester (e.g., 1)" min="1" required />
+      <textarea id="questionText" placeholder="Type your question here..." rows="4" required></textarea>
+      <button type="submit">Submit Question</button>
+    </form>
+  </section>
+
+  <section id="questions-section">
+    <h2>Questions & Answers</h2>
+
+    <div id="filters">
+      <input type="text" id="filterSubject" placeholder="Filter by subject" />
+      <input type="text" id="filterTopic" placeholder="Filter by topic" />
+      <input type="number" id="filterSemester" placeholder="Filter by semester" min="1" />
+      <button id="applyFiltersBtn">Apply Filters</button>
+    </div>
+
+    <div id="questionsList">
+      <!-- Questions will render here -->
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
