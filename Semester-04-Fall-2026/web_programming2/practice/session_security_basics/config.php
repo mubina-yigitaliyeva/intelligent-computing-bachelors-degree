@@ -1,5 +1,10 @@
 <?php
 
+// Cookie = Browser remembers information.
+
+// Session = Server remembers information,
+// and the browser usually holds a cookie containing the session ID.
+
 ini_set("session.use_only_cookies", 1);
 ini_set("session.use_strict_mode", 1);
 
