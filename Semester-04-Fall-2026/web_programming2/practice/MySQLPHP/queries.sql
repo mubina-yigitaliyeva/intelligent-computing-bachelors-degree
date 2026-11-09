@@ -12,6 +12,6 @@ CREATE TABLE comments (
     comment_text TEXT NOT NULL,
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     users_id INT(11) NOT NULL,
-    FOREIGN_KEY (users_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE
 );
 

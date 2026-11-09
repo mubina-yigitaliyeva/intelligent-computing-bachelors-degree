@@ -6,6 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h3>Sign Up</h3>
+
+    <form action="includes/formhandler.php" method="post">
+        <input type="text" name="username" placeholder="Username"> <br><br>
+        <input type="password" name="pwd" placeholder="Password"> <br><br>
+        <input type="text" name="email" placeholder="E-Mail"> <br><br>
+        <button>Sign Up</button>
+    </form>
+
 </body>
 </html>
