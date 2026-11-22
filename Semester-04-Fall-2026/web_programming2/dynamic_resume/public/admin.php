@@ -11,10 +11,6 @@ $userId = $_SESSION['admin_id'];
 $message = '';
 $error = '';
 
-if (empty($_SESSION['csrf_token'])) {
-    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-}
-
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = ?");
 $stmt->execute([$userId]);
 $user = $stmt->fetch();
@@ -25,13 +21,7 @@ if (!$user) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    if (
-        !isset($_POST['csrf_token']) ||
-        !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])
-    ) {
-        $error = 'Invalid request.';
-
-    } elseif (!isset($_FILES['avatar'])) {
+    if (!isset($_FILES['avatar'])) {
         $error = 'Please select an image.';
 
     } else {
@@ -49,7 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 throw $e;
             }
 
-            // Delete the previous uploaded image
             if (!empty($user['avatar_path'])) {
                 $oldFile = '../uploads/' . basename($user['avatar_path']);
 
@@ -101,7 +90,7 @@ if (!empty($user['avatar_path'])) {
 <body>
     <h1>Admin Dashboard</h1>
     <p>Welcome, <?= e($user['full_name']) ?>!</p>
-    
+
     <br>
     <p>
         <a href="index.php">View Resume</a> |
@@ -124,16 +113,11 @@ if (!empty($user['avatar_path'])) {
             alt="Profile"
             width="150" height="150">
 
+        <br><br> 
 
-        <form method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="csrf_token"
-                value="<?= e($_SESSION['csrf_token']) ?>">
-
-            <br><br>    
-
+        <form method="POST" enctype="multipart/form-data">   
             <input type="file" name="avatar"
                 accept=".jpg,.jpeg,.png" required>
-
             <button type="submit">Upload Photo</button>
         </form>
     </section>
@@ -150,7 +134,7 @@ if (!empty($user['avatar_path'])) {
             <p>No resume entries yet.</p>
         <?php else: ?>
 
-            <table border="1" cellpadding="10">
+            <table>
                 <tr>
                     <th>Type</th>
                     <th>Title</th>
@@ -177,11 +161,9 @@ if (!empty($user['avatar_path'])) {
                                 <input type="hidden" name="id"
                                     value="<?= (int) $entry['id'] ?>">
 
-                                <input type="hidden" name="csrf_token"
-                                    value="<?= e($_SESSION['csrf_token']) ?>">
-
                                 <button type="submit">Delete</button>
                             </form>
+                            
                         </td>
                     </tr>
                 <?php endforeach; ?>

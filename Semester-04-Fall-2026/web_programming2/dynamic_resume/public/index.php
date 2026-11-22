@@ -79,26 +79,11 @@ if (!empty($user['avatar_path'])) {
         $avatar = '../uploads/' . rawurlencode($avatarFilename);
     }
 }
+
+$pageTitle = $user['full_name'] . ' - Resume';
+
+require_once '../includes/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title><?= e($user['full_name']) ?> - Resume</title>
-
-    <link rel="stylesheet"
-          href="assets/css/style.css">
-</head>
-
-<body>
-
-<div class="container">
 
     <header class="header">
 
@@ -288,16 +273,7 @@ if (!empty($user['avatar_path'])) {
         </section>
     </main>
 
-    <footer>
-        <p>
-            &copy; <?= date('Y') ?>
-            <?= e($user['full_name']) ?>
-        </p>
-        <p>
-            <a href="login.php">Admin Login</a>
-        </p>
-    </footer>
-</div>
+    <br><br>
 
-</body>
-</html>
+
+<?php require_once '../includes/footer.php'; ?>
